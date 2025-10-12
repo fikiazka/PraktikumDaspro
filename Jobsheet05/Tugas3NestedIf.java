@@ -1,10 +1,12 @@
 package PraktikumDaspro.Jobsheet05;
+
 import java.util.Scanner;
 
 public class Tugas3NestedIf {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int A, B, C;
+        int max, min;
 
         System.out.print("Input Bilangan A: ");
         A = sc.nextInt();
@@ -15,36 +17,38 @@ public class Tugas3NestedIf {
         System.out.print("Input Bilangan C: ");
         C = sc.nextInt();
 
-        //Mencari Nilai Maksimum
+        // Mencari Nilai Maksimum
         if (A > B) {
             if (A > C) {
-                System.out.println("Nilai Maksimumnya adalah A: " + A);
+                max = A;
             } else {
-                System.out.println("Nilai Maksimumnya adalah C: " + C);
+                max = C;
             }
         } else {
             if (B > C) {
-                System.out.println("Nilai Maksimumnya adalah B: " + B);
+                max = B;
             } else {
-                System.out.println("Nilai Maksimumnya adalah C: " + C);
+                max = C;
             }
         }
 
-        //Mencari Nilai Minimum 
+        // Mencari Nilai Minimum
         if (A < B) {
             if (A < C) {
-                System.out.println("Nilai Minimumnya adalah A: " + A);
+                min = A;
             } else {
-                System.out.println("Nilai Minimumnya adalah C: " + C);
+                min = C;
             }
         } else {
             if (B < C) {
-                System.out.println("Nilai Minimumnya adalah B: " + B);
+                min = B;
             } else {
-                System.out.println("Nilai Minimumnya adalah C: " + C);
+                min = C;
             }
         }
-    
-        sc.close(); 
+
+        System.out.println("Nilai Bilangan Maksimum: " + max);
+        System.out.println("Nilai Bilangan Minimum: " + min);
+        sc.close();
     }
 }
