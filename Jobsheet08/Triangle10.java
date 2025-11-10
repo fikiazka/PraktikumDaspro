@@ -7,15 +7,16 @@ public class Triangle10 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan nilai n = ");
         int n = sc.nextInt();
-        int i = 0;
+        int i = 1;
 
         while (i <= n) {
-            int j = 0;
+            int j = 1;
 
-            while (j < 1) {
+            while (j <= i) {
                 System.out.print("*");
                 j++;
             }
+            System.out.println();
 
             i++;
         }
