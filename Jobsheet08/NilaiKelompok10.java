@@ -26,7 +26,7 @@ public class NilaiKelompok10 {
                 rataTertinggi = rataNilai;
                 kelompokTertinggi = i;
             }
-            i++;
+ 
         }
 
         System.out.println("Kelompok dengan rata - rata tertinggi adalah Kelompok " + kelompokTertinggi
