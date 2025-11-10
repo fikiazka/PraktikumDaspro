@@ -8,8 +8,8 @@ public class NilaiKelompok10 {
 
         double nilai, totalNilai, rataNilai, rataTertinggi = 0;
         int kelompokTertinggi = 0;
-        int i = 1;
-        while (i <= 6) {
+
+        for (int i =1; i<=6; i++) {
             System.out.println("Kelompok " + i);
             totalNilai = 0;
 
