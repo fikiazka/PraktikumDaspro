@@ -10,7 +10,7 @@ public class SearchNilai10 {
         int n = sc.nextInt();
 
         int[] arrNilai = new int[n];
-        int hasil = 0;
+        int hasil = -1;
 
         for (int i = 0; i < n; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
@@ -29,6 +29,8 @@ public class SearchNilai10 {
 
         if (hasil != -1) {
             System.out.println("nilai " + key + " ketemu, merupakan nilai mahasiswa ke- " + hasil);
+        }else{
+            System.out.println("Nilai yang dicari tidak ditemukan");
         }
 
         sc.close();
