@@ -10,31 +10,45 @@ public class ArrayRataNilai10 {
         int jumlahMhs = sc.nextInt();
 
         int[] nilaiMhs = new int[jumlahMhs];
-        double total = 0;
-        int jumlahMhsLulus = 0;
-        int mhsTidakLulus = 0;
+        double totalLulus = 0;
         int jumlahTidakLulus = 0;
+
+        double mhsTidakLulus = 0;
+        int jumlahMhsLulus = 0;
 
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + " : ");
             nilaiMhs[i] = sc.nextInt();
         }
 
+        int nilaiTertinggi = nilaiMhs[0];
+        int nilaiTerendah = nilaiMhs[0];
+
         for (int nilai : nilaiMhs) {
             if (nilai > 70) {
-                total += nilai;
+                totalLulus += nilai;
                 jumlahMhsLulus++;
             } else {
                 mhsTidakLulus += nilai;
                 jumlahTidakLulus++;
             }
+
+            if (nilai > nilaiTertinggi) {
+                nilaiTertinggi = nilai;
+            }
+
+            if (nilai < nilaiTerendah) {
+                nilaiTerendah = nilai;
+            }
         }
 
-        double rataLulus = (total > 0) ? (total / jumlahMhsLulus) : 0;
+        double rataLulus = (jumlahMhsLulus > 0) ? (totalLulus / jumlahMhsLulus) : 0;
         double rataTidakLulus = (jumlahTidakLulus > 0) ? (mhsTidakLulus / jumlahTidakLulus) : 0;
 
         System.out.println("Rata - Rata nilai lulus = " + rataLulus);
-        System.out.println("Rata - Rata nilai tidak lulus =" + rataTidakLulus);
+        System.out.println("Rata - Rata nilai tidak lulus = " + rataTidakLulus);
+        System.out.println("Nilai tertinggi = " + nilaiTertinggi);
+        System.out.println("Nilai terendah  = " + nilaiTerendah);
 
         sc.close();
     }
