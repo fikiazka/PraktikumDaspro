@@ -29,6 +29,11 @@ public class BioskoWithScanner10 {
                     kolom = sc.nextInt();
                     sc.nextLine();
 
+                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
+                        System.out.println("Baris / Kolom Tidak Tersedia!");
+                        break;
+                    }
+
                     penonton[baris - 1][kolom - 1] = nama;
                     System.out.println("Data Berhasil Disimpan!");
                     break;
