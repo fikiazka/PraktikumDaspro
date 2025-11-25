@@ -22,16 +22,24 @@ public class BioskoWithScanner10 {
                     System.out.print("Masukkan nama: ");
                     nama = sc.nextLine();
 
-                    System.out.print("Masukkan baris (1-4): ");
-                    baris = sc.nextInt();
+                    while (true) {
+                        System.out.print("Masukkan baris (1-4): ");
+                        baris = sc.nextInt();
 
-                    System.out.print("Masukkan kolom(1-2): ");
-                    kolom = sc.nextInt();
-                    sc.nextLine();
+                        System.out.print("Masukkan kolom(1-2): ");
+                        kolom = sc.nextInt();
+                        sc.nextLine();
 
-                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
-                        System.out.println("Baris / Kolom Tidak Tersedia!");
-                        break;
+                        if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
+                            System.out.println("Baris / Kolom Tidak Tersedia!");
+                            continue;
+                        }
+
+                        if (penonton[baris - 1][kolom - 1] != null) {
+                            System.out.println("Kursi sudah terisi! Silahkan pilih kuris lainnya.");
+                        } else {
+                            break;
+                        }
                     }
 
                     penonton[baris - 1][kolom - 1] = nama;
