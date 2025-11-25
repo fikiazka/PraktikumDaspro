@@ -49,7 +49,7 @@ public class BioskoWithScanner10 {
                     System.out.println("==== Daftar Penonton ====");
                     for (int i = 0; i < penonton.length; i++) {
                         for (int j = 0; j < penonton[i].length; j++) {
-                            daftarPenonton = (penonton[i][j] == null) ? "-" : penonton[i][j];
+                            daftarPenonton = (penonton[i][j] == null) ? "***" : penonton[i][j];
                             System.out.print(daftarPenonton + "\t");
                         }
                         System.out.println();
