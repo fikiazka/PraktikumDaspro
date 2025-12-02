@@ -2,14 +2,22 @@ package Pertemuan14;
 
 public class Kafe10 {
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true, "DISKON0");
     }
 
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (kodePromo.equals("DISKON50")) {
+            System.out.println("Kode promo valid! Anda berhasil mendapatkan diskon 50%");
+        } else if (kodePromo.equals("DISKON30")) {
+            System.out.println("Kode promo valid! Anda berhasil mendapatkan diskon 30%");
+        }else{
+            System.out.println("Kode promo invalid!");
         }
 
         System.out.println("==== MENU RESTO KAFE ====");
